@@ -1,0 +1,78 @@
+<html>
+<head>
+  <link href="https://sachinchoolur.github.io/lightgallery.js/lightgallery/css/lightgallery.css" rel="stylesheet">
+  <link href="https://sachinchoolur.github.io/lightgallery.js/lightgallery/css/lg-transitions.css" rel="stylesheet">
+
+  <script src="https://sachinchoolur.github.io/lightgallery.js/lightgallery/js/lightgallery.js"></script>
+
+  <!-- lightgallery plugins -->
+  <script src="https://sachinchoolur.github.io/lightgallery.js/lightgallery/js/lg-thumbnail.js"></script>
+  <script src="https://sachinchoolur.github.io/lightgallery.js/lightgallery/js/lg-fullscreen.js"></script>
+  <script src="js/lg-video.js"></script>
+  <script src="https://sachinchoolur.github.io/lightgallery.js/lightgallery/js/lg-autoplay.js"></script>
+  <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <script src="https://solid.github.io/releases/rdflib.js/rdflib-0.7.0.min.js"></script>
+
+
+</head>
+<body>
+
+  <div>
+    <h1><a onclick="put(0)">0</a></h1>
+  </div>
+
+  <div>
+    <h1><a onclick="put(1)">1</a></h1>
+  </div>
+
+  <div>
+    <h1><a onclick="put(2)">2</a></h1>
+  </div>
+
+
+<script>
+
+//var solid = SolidClient
+
+// utils
+function getParam(name) {
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.href);
+  if( results == null ) {
+    return "";
+  } else {
+    return decodeURIComponent(results[1]);
+  }
+}
+
+
+// globals
+var container = getParam('container') || 'https://melvin.databox.me/imagelist/'
+var wss = getParam('wss') || container
+var hook = getParam('hook')
+var playlist = getParam('playlist')
+
+var slides = []
+var el = document.getElementById('aniimated-thumbnials')
+var files = []
+
+function putFile(file, data) {
+  xhr = new XMLHttpRequest();
+  xhr.open('PUT', file, false);
+  xhr.setRequestHeader('Content-Type', 'text/turtle; charset=UTF-8');
+  xhr.send(data);
+}
+
+function put(name) {
+  putFile(hook + name, '')
+}
+
+
+</script>
+</body>
+<html>
