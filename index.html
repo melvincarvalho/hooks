@@ -49,6 +49,29 @@
     margin-top: 20px;
   }
 
+  a:link {
+      color: #3498db;
+  }
+
+  /* visited link */
+  a:visited {
+      color: #3498db;
+  }
+
+  /* mouse over link */
+  a:hover {
+      color: red;
+  }
+
+  /* selected link */
+  a:active {
+      color: #3498db;
+  }
+
+a {
+  text-decoration: none;
+}
+
   .numpad {
     margin: 0;
     padding: 0;
@@ -94,7 +117,7 @@
       <li onclick="put(3)" rel="3">3</li>
       <li onclick="put(0)" rel="0">0</li>
       <li onclick="put(11)" rel=".">.</li>
-      <li onclick="put(13)" rel="E">E</li>
+      <li onclick="put(13)" rel="E"><a href="#">E</a></li>
     </ul>
   </div>
 
