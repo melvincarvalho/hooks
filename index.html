@@ -21,28 +21,19 @@
      -webkit-user-select: none;
   }
 
-  body {
+
+
+  body,html {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     color: #3498db;
-    width: 320px;
-    height: 480px;
     margin: auto;
+    height: 100vh;
+    min-height: 100vh;
+
   }
 
-  input {
-    font-size: 31px;
-    padding: 3px 10px;
-    border: 0;
-    border-bottom: 2px solid #3498db;
-    margin: 0 15px;
-    width: 84%;
-    outline: 0;
-    text-align: right;
-    border-radius: 0;
-    color: #3498db;
-  }
 
   ::-webkit-input-placeholder { color: #ccc; }
   :-moz-placeholder { color: #ccc; }
@@ -51,8 +42,8 @@
 
   #container {
     padding-top: 40px;
-    width: 320px;
-    height: 440px;
+    height: 100vh;
+    min-height: 100vh;
     position: relative;
     border: 1px solid #eee;
     margin-top: 20px;
@@ -63,15 +54,15 @@
     padding: 0;
     position: absolute;
     bottom: 0;
-    width: 320px;
+    height: 100vh;
+    min-height: 100vh;
   }
 
   .numpad li {
-    font-size: 32px;
+    font-size: 128px;
     float: left;
     list-style: none;
     text-align: center;
-    height: 65px;
     padding-top: 15px;
     width: 33.33%;
     -webkit-font-smoothing: antialiased;
