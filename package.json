@@ -1,6 +1,6 @@
 {
   "name": "solid_hooks",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "hooks for solid apps",
   "main": "index.js",
   "scripts": {
