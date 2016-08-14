@@ -20,22 +20,92 @@
   * {
      -webkit-user-select: none;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #3498db;
+    width: 320px;
+    height: 480px;
+    margin: auto;
+  }
+
+  input {
+    font-size: 31px;
+    padding: 3px 10px;
+    border: 0;
+    border-bottom: 2px solid #3498db;
+    margin: 0 15px;
+    width: 84%;
+    outline: 0;
+    text-align: right;
+    border-radius: 0;
+    color: #3498db;
+  }
+
+  ::-webkit-input-placeholder { color: #ccc; }
+  :-moz-placeholder { color: #ccc; }
+  ::-moz-placeholder { color: #ccc; }
+  :-ms-input-placeholder { color: #ccc; }
+
+  #container {
+    padding-top: 40px;
+    width: 320px;
+    height: 440px;
+    position: relative;
+    border: 1px solid #eee;
+    margin-top: 20px;
+  }
+
+  .numpad {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 320px;
+  }
+
+  .numpad li {
+    font-size: 32px;
+    float: left;
+    list-style: none;
+    text-align: center;
+    height: 65px;
+    padding-top: 15px;
+    width: 33.33%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   </style>
 
 </head>
 <body>
 
-  <div>
-    <h1><a onclick="put(0)">0</a></h1>
+  <div id="container">
+    <input class="input-number" readonly="true" type="text" placeholder="1234567890"/>
+    <ul class="numpad">
+      <li onclick="put(1)" rel="1">1</li>
+      <li onclick="put(0)" rel="2">2</li>
+      <li rel="3">3</li>
+      <li rel="4">4</li>
+      <li rel="5">5</li>
+      <li rel="6">6</li>
+      <li rel="7">7</li>
+      <li rel="8">8</li>
+      <li rel="9">9</li>
+      <li rel=".">.</li>
+      <li onclick="put(0)" rel="0">0</li>
+      <li rel="delete"><img src="https://devcode.name/numpad/delete.png" width="25" /></li>
+    </ul>
   </div>
 
-  <div>
-    <h1><a onclick="put(1)">1</a></h1>
-  </div>
 
-  <div>
-    <h1><a onclick="put(2)">2</a></h1>
-  </div>
 
 
 <script>
